@@ -17,7 +17,7 @@ predict.PTOforest = function(object, newx, ...) {
     stats::predict(object$postfit, data = newx)$predictions
 
   } else {
-    stats::predict(object$PTOfit1, newx = newx) -
+    stats::predict(object$PTOfit1, newx = newx) /
       stats::predict(object$PTOfit0, newx = newx)
 
   }
